@@ -213,6 +213,7 @@ public class Janela extends JFrame
         {
             if (esperaPonto)
             {
+				statusBar1.setText("Mensagem: clique o local do ponto desejado");    
                 figuras.add (new Ponto (e.getX(), e.getY(), corAtual));
                 figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
                 esperaPonto = true;
@@ -232,7 +233,7 @@ public class Janela extends JFrame
                         esperaFimReta = false;
                         figuras.add (new Linha(p1.getX(), p1.getY(), e.getX(), e.getY(), corAtual));
                         figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
-                        statusBar1.setText("Mensagem:");    
+                        statusBar1.setText("Mensagem: clique o ponto inicial da reta");    
                     }
                     else
 						if (esperaCentro)
@@ -250,7 +251,7 @@ public class Janela extends JFrame
 								figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
 								esperaCentro = true;
 								esperaRaio = false;
-								statusBar1.setText("Mensagem:");   
+								statusBar1.setText("Mensagem: clique o ponto central do circulo");   
 							}
 							else
 								if (esperaCentroElipse)
@@ -258,7 +259,7 @@ public class Janela extends JFrame
 									p1 = new Ponto (e.getX(), e.getY(), corAtual);
 									esperaCentroElipse = false;
 									esperaRaioElipse = true;
-									statusBar1.setText("Mensagem: clique o ponto final do raio da elipse");    
+									statusBar1.setText("Mensagem: clique o ponto final da elipse");    
 								}
 								else
 									if (esperaRaioElipse)
@@ -269,7 +270,7 @@ public class Janela extends JFrame
 										figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
 										esperaCentroElipse = true;
 										esperaRaioElipse = false;
-										statusBar1.setText("Mensagem:");   
+										statusBar1.setText("Mensagem: clique o pomto central da elipse");   
 									}
 			}
         
