@@ -75,7 +75,7 @@ public class Retangulo extends Figura
     {
         g.setColor(this.cor);
         g.drawRect(this.ponto.getX(), this.ponto.getY(),
-                   this.largura, this.altura);
+                   this.altura, this.largura);
     }
 
     public String toString()
